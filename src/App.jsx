@@ -13,7 +13,8 @@ function App() {
  <>
   <MyNav/>
 
-  <ItemListContainer greeting="Bienvenidos a GameHive!" />
+  <ItemListContainer greeting= "Bienvenidos a GameHive!" />
+  
  </>
   )
 }
