@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import "../../App.css"; // Asegúrate de que la ruta del archivo CSS sea correcta
+import "../../App.css";
 
 function MyNav() {
   return (
@@ -20,6 +20,11 @@ function MyNav() {
                 <NavDropdown.Item href="#action/3.2">¿Donde Estamos?</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Medios de Pagos</NavDropdown.Item>
               </NavDropdown>
+            </Nav>
+            <Nav className="ml-auto">
+              <Nav.Item>
+                <Nav.Link href="#notifications" className="navbar-number">4</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
