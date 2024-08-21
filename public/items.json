@@ -1,0 +1,59 @@
+[
+
+      {
+        "id": 1,
+        "nombre": "Cyberpunk 2077",
+        "plataforma": "PC",
+        "precio": 59.99,
+        "descripcion": "Un juego de rol de acción ambientado en un mundo abierto futurista.",
+        "stock": 25,
+        "imagen": "/assets/img/CyberPunk.jpeg"
+      },
+      {
+        "id": 2,
+        "nombre": "The Witcher 3: Wild Hunt",
+        "plataforma": "PC",
+        "precio": 39.99,
+        "descripcion": "Un juego de rol de acción que sigue la historia de Geralt de Rivia en un vasto mundo abierto.",
+        "stock": 40,
+        "imagen": "/assets/img/ThwWitcher3.jpeg"
+      },
+      {
+        "id": 3,
+        "nombre": "God of War",
+        "plataforma": "PlayStation",
+        "precio": 49.99,
+        "descripcion": "Kratos regresa en una aventura épica basada en la mitología nórdica.",
+        "stock": 30,
+        "imagen": "/assets/img/God of War.jpeg"
+      },
+      {
+        "id": 4,
+        "nombre": "Spider-Man: Miles Morales",
+        "plataforma": "PlayStation",
+        "precio": 49.99,
+        "descripcion": "Únete a Miles Morales en su lucha para convertirse en Spider-Man en la ciudad de Nueva York.",
+        "stock": 20,
+        "imagen": "/assets/img/SpiderMan.jpeg"
+      },
+      {
+        "id": 5,
+        "nombre": "Halo Infinite",
+        "plataforma": "Xbox",
+        "precio": 59.99,
+        "descripcion": "El Jefe Maestro regresa para enfrentarse a una nueva amenaza en la saga Halo.",
+        "stock": 15,
+        "imagen": "/assets/img/HaloInfinite.jpeg"
+      },
+      {
+        "id": 6,
+        "nombre": "Forza Horizon 5",
+        "plataforma": "Xbox",
+        "precio": 59.99,
+        "descripcion": "Explora un vasto mundo abierto en México en esta espectacular experiencia de carreras.",
+        "stock": 35,
+        "imagen": "/assets/img/ForzaHorizon.jpeg"
+      }
+    ]
+  
+  

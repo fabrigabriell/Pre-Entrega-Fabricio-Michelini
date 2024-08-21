@@ -2,29 +2,37 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import "./Navbar.css"
 import "../../App.css";
+import CartWidget from '../CartWidget/CartWidget';
+import { Link, NavLink } from 'react-router-dom';
+
+
 
 function MyNav() {
   return (
     <header>
       <Navbar expand="lg" className="navbar-custom fixed-top">
         <Container>
-          <Navbar.Brand href="#home" className="blinking-title">GameHive</Navbar.Brand>
+          <Link className="blinking-title" to={"/"}>GameHive</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-              <Nav.Link href="#link">Catalogo</Nav.Link>
-              <NavDropdown title="Sobre Nosotros" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">¿Quienes Somos?</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">¿Donde Estamos?</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Medios de Pagos</NavDropdown.Item>
-              </NavDropdown>
+              <li>
+              <Link to="/plataforma/PC">Pc</Link>
+              </li>
+
+              <li>
+              <Link to="/plataforma/Xbox">Xbox</Link>
+              </li>
+
+              <li>
+              <Link to="/plataforma/PlayStation">Playstation</Link>
+              </li>
+
             </Nav>
-            <Nav className="ml-auto">
-              <Nav.Item>
-                <Nav.Link href="#notifications" className="navbar-number">4</Nav.Link>
-              </Nav.Item>
+            <Nav className="ms-auto">
+            <CartWidget/>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -34,3 +42,4 @@ function MyNav() {
 }
 
 export default MyNav;
+

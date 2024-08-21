@@ -1,0 +1,47 @@
+/* Navbar */
+.navbar-custom {
+  background-color: #5e00a1;
+  color: white;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.navbar-custom .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-right: 15px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.CartWidget {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes blinkColors {
+  0% { color: #FF0000; }
+  20% { color: #00FF00; }
+  40% { color: #0000FF; }
+  60% { color: #FFFF00; }
+  80% { color: #FF00FF; }
+  100% { color: #00FFFF; }
+}
+
+.blinking-title {
+  padding: 5px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  animation: blinkColors 2s infinite;
+  text-align: center;
+  margin: 20px 0;
+}
