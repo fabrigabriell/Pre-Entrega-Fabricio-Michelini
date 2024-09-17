@@ -2,28 +2,38 @@
 .navbar-custom {
   background-color: #5e00a1;
   color: white;
+  border-bottom: 2px solid #4a0070;
 }
 
 .navbar-custom .navbar-brand {
   color: white;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar-custom .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 0.875rem;
-  margin-right: 15px;
+  font-size: 1rem;
+  margin-right: 20px;
+  padding: 5px;
+  transition: color 0.3s ease, padding 0.3s ease;
 }
 
 .navbar-custom .nav-link:hover {
-  color: #000;
+  color: #ffd700;
   text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.navbar-custom .nav-link.active {
+  color: #ffd700;
+  font-weight: bold;
 }
 
 .CartWidget {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: white;
   font-weight: bold;
 }
@@ -39,9 +49,10 @@
 
 .blinking-title {
   padding: 5px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-decoration: none;
   animation: blinkColors 2s infinite;
   text-align: center;
   margin: 20px 0;
+  font-weight: bold;
 }
