@@ -3,6 +3,7 @@ import './ItemListContainer.css';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -11,25 +12,23 @@ const ItemListContainer = ({ greeting }) => {
   const { idPlataform } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/items.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+    
+    setLoading(true)
 
-        const filteredItems = idPlataform ? data.filter((i) => i.plataforma === idPlataform) : data;
-        setItems(filteredItems);
+    const db = getFirestore();
 
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    const myProduct = idPlataform ? query(collection(db, "item"), where("plataforma","==",idPlataform))
+    : collection(db, "item")
 
-    fetchData();
+    getDocs(myProduct).then((res)=> {
+      const newProduct = res.docs.map((doc)=> {
+        const data = doc.data();
+        return {id : doc.id, ...data };
+      });
+      setItems(newProduct);
+    })
+    .catch((error)=> console.log("Error searching items", error))
+    .finally(() => setLoading(false));
   }, [idPlataform]);
 
   return (
